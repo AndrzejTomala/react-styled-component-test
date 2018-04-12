@@ -11,7 +11,7 @@ const Button = styled.a`
   box-sizing: border-box;
 
   &:hover {
-   background: ${props => props.theme.main.activeColor};
+    opacity: 0.9;
   }
 
   border-radius: ${props => props.theme.main.radius};
@@ -22,10 +22,10 @@ const Button = styled.a`
   ${props => props.primary && css`
     background: ${props => props.theme.primary.background};
     color: ${props => props.theme.primary.color};
-    border: 1px solid ${props => props.theme.primary.background};
+    border: 1px solid ${props => props.theme.primary.border};
 
     &:hover {
-      background: ${props => props.theme.main.activeColor};
+      opacity: 0.9;
     }
   `}
 

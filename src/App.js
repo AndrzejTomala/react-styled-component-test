@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { ThemeProvider } from 'styled-components';
-import Theme from './theme'
+import { Theme } from './theme/basic'
 import Button from './components/button'
 import Icon from './components/icon'
 import { Flex, Box } from 'grid-styled'

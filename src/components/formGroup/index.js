@@ -1,29 +1,45 @@
 import styled, { css } from 'styled-components';
-import Input from '../input';
+import { Input, InputWrapper } from '../input';
+import Label from '../label';
 import Button from '../button';
 
 const FormGroup = styled.div`
   box-sizing: border-box;
   display: flex;
+  align-items: flex-end;
 
-  & > ${Input}, & > ${Button} {
+  & > ${Input},
+  & > ${InputWrapper},
+  & > ${Button},
+  & > ${Label} {
     flex: 1 1 auto;
   }
 
-  ${props => !props.space && css`
+   ${props => props.full && css`
+     width: 100%;
+  `}
 
-    & > ${Input}, & > ${Button} {
+  ${props => !props.space && css`
+    & > ${Input},
+    & > ${InputWrapper} > ${Input},
+    & > ${Button},
+    & > ${Label} {
       border-radius: 0px;
       margin-left: -1px;
     }
-    & > *:last-child {
+
+    & > ${Input}:last-child,
+    & > ${Label}:last-child,
+    & > ${InputWrapper}:last-child > ${Input},
+    & > ${Button}:last-child {
       border-top-right-radius: ${props => props.theme.main.radius};
       border-bottom-right-radius: ${props => props.theme.main.radius};
     }
-    & > *:hover {
-      z-index: 1;
-    }
-    & > *:first-child {
+
+    & > ${Input}:first-child,
+    & > ${Label}:first-child,
+    & > ${InputWrapper}:first-child > ${Input},
+    & > ${Button}:first-child {
       margin-left: 0;
       border-top-left-radius: ${props => props.theme.main.radius};
       border-bottom-left-radius: ${props => props.theme.main.radius};

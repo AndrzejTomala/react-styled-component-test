@@ -5,3 +5,7 @@ body {
   padding: 0;
   font-family: 'Open Sans';
 }
+
+textarea {
+  font-family: 'Open Sans';
+}

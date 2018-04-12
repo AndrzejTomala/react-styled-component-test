@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
-export const Input = styled.input`
+export const Textarea = styled.textarea`
   padding: 0.5em;
   box-sizing: border-box;
   font-size: 1em;
@@ -27,7 +27,7 @@ export const Input = styled.input`
   `}
 `
 
-export const InputWrapper = styled.div`
+export const TextareaWrapper = styled.div`
   position: relative;
 
   & > label {
@@ -47,8 +47,10 @@ export const InputWrapper = styled.div`
     left: 0;
   }
 
-  & > ${Input} {
+  & > ${Textarea} {
     width: 100%;
+    margin: 0;
+    height: 100%;
   }
 
   ${props => props.full && css`
@@ -63,13 +65,13 @@ export const InputWrapper = styled.div`
       padding-left: 0.9em;
     }
 
-    & > ${Input} {
+    & > ${Textarea} {
       padding: 0.8em 0.5em 0.2em 0.5em;
     }
   `}
 `
 
 export default {
-  Input,
-  InputWrapper
+  Textarea,
+  TextareaWrapper
 }

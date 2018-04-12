@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-import carretDown from './carret-down.svg';
-import carretUp from './carret-up.svg';
+import caretDownSVG from './caret-down.svg';
+import caretUpSVG from './caret-up.svg';
 
 const Select = styled.select`
   padding: 0.5em 1.5em 0.5em 0.5em;
@@ -13,13 +13,13 @@ const Select = styled.select`
   color: ${props => props.theme.main.color};
   border: 1px solid ${props => props.theme.main.grayMedium};
   background-color: ${props => props.theme.main.background};
-  background-image: url(${carretDown});
+  background-image: url(${caretDownSVG});
   background-repeat: no-repeat;
   background-position: right 0.5em center;
   background-size: 0.75em auto;
 
   &::focus {
-    background-image: url(${carretUp});
+    background-image: url(${caretUpSVG});
   }
 
   &::-ms-expand {
